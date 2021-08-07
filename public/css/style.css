@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@600&display=swap');
+
+body {
+    margin-top: 4.2rem;
+}
+.navbar {
+    background-color: #c66363;
+}
+.navbar-brand {
+    background-color: #c66363;
+    border-radius: 1px;
+    text-align: right;
+    min-width: 18rem;
+    font-family: Courgette;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.nav-link {
+    border-bottom: 1px dotted rgba(255, 255, 255, .2);
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-size: .8rem;
+    transition: all .5s ease;
+    color: #fff !important;
+}
+.nav-link:hover {
+    color: #c66363 !important;
+}
+.navbar-nav {
+    background-color: #242a2c;
+}
+.carousel-img {
+    height: 500px;
+}
+.carousel-caption h5 {
+    background-color: #c66363;
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding: 25px 15px;
+    width: 700px;
+}
+.carousel-caption p {
+    background-color: #183E7D;
+    margin: 5px 30px 15px 30px;
+    color: #fff;
+    padding: 15px;
+    font-size: .9rem;
+    width: 600px;
+}
+.btn-carousel {
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    padding: 15px 25px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.397);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.btn-carousel:hover {
+    text-transform: none;
+    color: #183E7D;
+}
+.card {
+    border-top: none;
+    border-right: none;
+}
+.title {
+    background-color: #c66363;
+    text-transform: uppercase;
+    color: #fff;
+    text-indent: 9rem;
+}
+.second-article {
+    padding: 40px 10% 25px 10%;
+    color: #fff;
+    background-color: #c66363;
+    border-bottom: 15px solid #4fa08c;
+}
+.rodape {
+    color: gray;
+}
+.footer-links {
+    color: gray;
+    text-decoration: none;
+}
+.slide2 {
+    height: 421px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: #000; 
+    background-color: #c66363; 
+    padding: 15px; 
+    border-radius: 6px;
+}
+
+@media screen and (min-width: 992px){
+    .navbar {
+        background-color: #fff !important;
+    }
+    .navbar-nav {
+        background-color: transparent;
+    }
+    .nav-link {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        color: black !important;
+    }
+}
