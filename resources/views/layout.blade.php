@@ -58,19 +58,21 @@
   </header>
   <main>
     <section>
-      <div class="jumbotron jumbotron-fluid d-lg-none mt-1 py-5"">
+      <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-1 pt-4 pb-0 mb-0">
           <div class="container">
             <h2 class="">Faça parte do nosso projeto Abraço Quentinho</h2>
-            <p class="">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e comida.</p>
+            <p class="">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e alimentos.</p>
             <a href="#" class="btn btn-primary">Quero Participar!</a>
           </div>
+          <img class="img-fluid" src="{!! asset('./imagens/jumb2.png') !!}" alt="pessoas se ajudando">
       </div>
-      <div class="jumbotron jumbotron-fluid d-lg-none mt-1 py-5">
+      <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-0 pt-0 pb-4">
         <div class="container">
           <h2 class="">Compartilhe Coisas Boas, Compartilhe Amor</h2>
           <p class="">Além da pandemia, nas últimas semanas estamos vivendo em um clima extremamente frio, e neste momento toda ajuda é bem vinda! Faça parte do nosso time colaborando!</p>
           <a href="#" class="btn btn-primary">Quero Contribuir!</a>
         </div>
+        <img class="img-fluid" src="{!! asset('./imagens/jumb1.jpeg') !!}" alt="pessoas se ajudando">
       </div>
     </section>
     <section>
@@ -90,7 +92,7 @@
                   <p class="rounded py-2 text-justify">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e comida.</p>
                 </div>
                 <div class="row justify-content-center">
-                  <a href="#" class="btn btn-outline-primary btn-lg offset-4">Quero Contribuir!</a>
+                  <a href="#" class="btn btn-outline-primary btn-lg offset-4">Quero Participar!</a>
                 </div>
               </div>
           </div>
@@ -120,35 +122,35 @@
     <section class="container">
       <article class="row my-4">
       <div class="card col-10 col-lg-3 col-md-5">
-          <img class="card-img-top" src="img/c01.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{!! asset('./imagens/card1.jpeg') !!}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Roupas</h5>
+            <p class="card-text pb-4">Neste frio nada melhor do que uma roupa bem aconchegante! 😄</p>
+            <a href="#" class="btn btn-primary bt-card">Doar Roupas</a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
-          <img class="card-img-top" src="img/c02.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{!! asset('./imagens/card2.png') !!}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Alimentos</h5>
+            <p class="card-text pb-4">Cestas básicas compostas por alimentos não perecíveis serão de grande ajuda! Lembre-se que qualquer ajuda é bem vinda! 🥰</p>
+            <a href="#" class="btn btn-primary bt-card">Doar Alimentos</a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
-          <img class="card-img-top" src="img/c03.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{!! asset('./imagens/card3.jpg') !!}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Seja um Voluntário!</h5>
+            <p class="card-text pb-4">Você pode fazer parte do time também na linha de frente! 👊</p>
+            <a href="#" class="btn btn-primary bt-card">Ser Um Membro!</a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
-          <img class="card-img-top" src="img/c04.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{!! asset('./imagens/card4.jpg') !!}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Pix</h5>
+            <p class="card-text pb-4">Você pode ajudar também fazendo um pix. Você pode consultar todas as doações através do extrato, mostrando como ele foi utilizado. (gasolina pra locomoção, alimentos, roupas e etc) 💰</p>
+            <a href="#" class="btn btn-primary bt-card">Fazer Um Pix</a>
           </div>
         </div>
       </article>

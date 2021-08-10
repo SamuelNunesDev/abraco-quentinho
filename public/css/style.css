@@ -95,6 +95,16 @@ body {
     padding: 15px; 
     border-radius: 6px;
 }
+.card-img-top {
+    display: flex;
+    align-self: center;
+    height: 200px;
+    width: 290px;
+}
+.bt-card {
+    position: absolute;
+    bottom: 10px;
+}
 
 @media screen and (min-width: 992px){
     .navbar {
