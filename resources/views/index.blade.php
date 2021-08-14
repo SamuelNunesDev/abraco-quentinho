@@ -11,6 +11,7 @@
     <title>Abraço Quentinho</title>
 </head>
 <body>
+  @include('cadastro')
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 px-0 shadow">
       <a class="navbar-brand col-3 text-light text-justify pt-3 pb-2 px-4" href="#">
@@ -29,17 +30,17 @@
           </li>
           <li class="nav-item">
             <a class="nav-link d-block py-2 px-4" href="#">
-              <i class="fa fa-child"></i> Ações 
+              <i class='fas fa-hands-helping'></i> Colaborar 
             </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link d-block py-2 px-4" href="#">
-                <i class='fas fa-diagnoses'></i> Quem somos nós 
-              </a>
-            </li>
+            <a class="nav-link d-block py-2 px-4" href="#">
+              <i class='fas fa-diagnoses'></i> Sobre 
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link d-block py-2 px-4" href="#">
-              <i class='fas fa-hands-helping'></i> Colaborar 
+              <i class="fa fa-child"></i> Ações 
             </a>
           </li>
           <li class="nav-item">
@@ -62,7 +63,7 @@
           <div class="container">
             <h2 class="">Faça parte do nosso projeto Abraço Quentinho</h2>
             <p class="">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e alimentos.</p>
-            <a href="#" class="btn btn-primary">Quero Participar!</a>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">Quero Participar!</a>
           </div>
           <img class="img-fluid" src="{!! asset('./imagens/jumb2.png') !!}" alt="pessoas se ajudando">
       </div>
@@ -92,7 +93,9 @@
                   <p class="rounded py-2 text-justify">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e comida.</p>
                 </div>
                 <div class="row justify-content-center">
-                  <a href="#" class="btn btn-outline-primary btn-lg offset-4">Quero Participar!</a>
+                  <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-target="#modalCadastro" data-toggle="modal">
+                    Quero Participar!
+                  </a>
                 </div>
               </div>
           </div>
@@ -125,8 +128,8 @@
           <img class="card-img-top" src="{!! asset('./imagens/card1.jpeg') !!}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Roupas</h5>
-            <p class="card-text pb-4">Neste frio nada melhor do que uma roupa bem aconchegante! 😄</p>
-            <a href="#" class="btn btn-primary bt-card">Doar Roupas</a>
+            <p class="card-text pb-4">Neste frio nada melhor do que um agasalho bem aconchegante! 😄</p>
+            <a href="#" class="btn btn-primary bt-card">Doar Roupas!</a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
@@ -134,7 +137,7 @@
           <div class="card-body">
             <h5 class="card-title">Alimentos</h5>
             <p class="card-text pb-4">Cestas básicas compostas por alimentos não perecíveis serão de grande ajuda! Lembre-se que qualquer ajuda é bem vinda! 🥰</p>
-            <a href="#" class="btn btn-primary bt-card">Doar Alimentos</a>
+            <a href="#" class="btn btn-primary bt-card">Doar Alimentos!</a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
@@ -150,95 +153,76 @@
           <div class="card-body">
             <h5 class="card-title">Pix</h5>
             <p class="card-text pb-4">Você pode ajudar também fazendo um pix. Você pode consultar todas as doações através do extrato, mostrando como ele foi utilizado. (gasolina pra locomoção, alimentos, roupas e etc) 💰</p>
-            <a href="#" class="btn btn-primary bt-card">Fazer Um Pix</a>
+            <a href="#" class="btn btn-primary bt-card">Fazer Um Pix!</a>
           </div>
         </div>
       </article>
     </section>
     <section class="container">
-        <article class="row py-5">
-          <div class="col-6">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate pariatur in doloremque necessitatibus magni consequatur?</h2>
-            <p>Ipsum, nostrum corporis provident, cumque numquam eos et natus neque amet fugit enim cum molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur esse, veniam, aliquam voluptas repellendus maxime hic culpa quis excepturi eum minus quo deleniti laborum qui blanditiis iste vero quia est?</p>
-            <a href="#" class="btn btn-primary">BUTTON</a>
-            <a href="#" class="btn btn-secondary">BUTTON</a>
+        <article class="row py-3">
+            <h2 class="border-bottom col pb-2 mb-3">Sobre plataforma "Abraço Quentinho" </h2>
+            <p>A idéia surgiu após uma conversa no grupo da familia no whatsapp. Estavamos falando sobre o frio que tem feito nos últimos dias e sobre como deve ser difícil para quem não tem um teto pra se abrigar quando a noite chega. O projeto propõe o seguinte fluxo:</p>
+            <div class="col-lg-6">
+            <h4>1º Acesso ao site</h4>
+            <p>Primeiro contato com a plataforma.</p>
+            <h4>2º Quer Colaborar</h4>
+            <p>Aqui a pessoa decide também se quer:
+              <ul>
+                <li>Fazer uma doação.
+                  <ul>
+                    <li>Entregar em um ponto de recolhimento. <i>Neste caso ela pode escolher se quer se identificar ou não.</i></li>
+                    <li>Aguardar pela equipe buscar a doação em sua casa.</li>
+                  </ul>
+                </li>
+                <li>Ser um membro do time de voluntários.</li>
+              </ul>
+            </p>
+            <h4>3º Cadastro Rápido</h4>
+            <p>Nessa etapa existem duas possibilidades:
+              <ul>
+                <li>O colaborador que optar por fazer uma doação entregando em um ponto de recolhimento e não quer se identificar, não faz o cadastro.</li>
+                <li>O cadastro consiste em 3 informações basicamente: O nome do colaborador, o produto nos casos de doações e o endereço caso o colaborador opte por aguardar a equipe em sua casa.</li>
+              </ul>
+              Este cadastro será mostrado na seção "Extrato", mostrando todo o histórico de colaborações realizadas. <strong>O endereço é um dado sigiloso e ficará salvo somente até a equipe visualizar, logo após será apagado automáticamente pelo sistema.</strong>
+            </p>
+            <button class="btn btn-outline-primary">Fazer uma doação</button>
+            <button class="btn btn-outline-secondary">Fazer parte da equipe</button>
           </div>
-          <div class="col-6">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate pariatur in doloremque necessitatibus magni consequatur?</h2>
-            <p>Ipsum, nostrum corporis provident, cumque numquam eos et natus neque amet fugit enim cum molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur esse, veniam, aliquam voluptas repellendus maxime hic culpa quis excepturi eum minus quo deleniti laborum qui blanditiis iste vero quia est?</p>
-            <p>Ipsum, nostrum corporis provident, cumque numquam eos et natus neque amet fugit enim cum molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur esse, veniam, aliquam voluptas repellendus maxime hic culpa quis excepturi eum minus quo deleniti laborum qui blanditiis iste vero quia est?</p>
+          <div class="col">
+            <img src="{!! asset('./imagens/diagrama.png') !!}" alt="imagem do diagrama">
           </div>
-        </article>
     </section>
         <section>
-            <h3 class="title py-4 mb-0 shadow"><strong>Last Articles</strong></h3>
+            <h3 class="title py-4 mb-0 shadow"><strong>Ultimas Ações</strong></h3>
               <div class="container-fluid">
                 <div class="row">
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/01.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/02.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/03.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/04.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/05.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/06.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/07.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/08.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/09.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/10.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/11.jpg" width="100%"  alt=""></a>
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="img/articles/12.jpg" width="100%"  alt=""></a>
+                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="" width="100%"  alt=""></a>
                 </div>
               </div>
-        </section>
-        <section class="container-fluid bg-dark">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row justify-content-center">
-                    <img class="col-8" src="img/slider/slide-01.png" alt="First slide">
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row justify-content-center">
-                    <img class="col-8" src="img/slider/slide-02.png" alt="Second slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
-              </div>
-          </div>
         </section>
         <section class="container-fluid">
             <article class="row">
                 <div class="col-12 second-article text-center">
-                    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti delectus placeat magnam saepe nesciunt laudantium. Et dolorum id assumenda facilis maxime. Error ea eveniet amet explicabo voluptatibus eum sunt quas?</h2>
-                    <p>Error ea eveniet amet explicabo voluptatibus eum sunt quas?</p>
+                    <h2>Seja o primeiro a colaborar!</h2>
+                    <p>Nenhuma doação até o momento :(</p>
                 </div>
             </article>
         </section>
         <footer class="container-fluid bg-dark">
             <div class="container text-light">
-              <div class="row py-5 rodape">
+              <div class="row pt-5 pb-3 rodape">
                   <div class="col-12 col-md-2">
-                      <p>Infusion</p>
+                      <p>Abraço Quentinho</p>
                   </div>
                   <div class="col-12 col-md-5">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi eum possimus in nam similique facere laborum molestias ipsa nisi? Nemo cupiditate consectetur minima ipsum debitis dicta magni laudantium, porro asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum autem, omnis laborum ab adipisci culpa distinctio sit tempore sed suscipit ipsam quasi placeat modi unde eius harum cumque eos earum?</p>
+                      <p>A plataforma "Abraço Quentinho" não possui fins lucrativos e é 100% colaborativa. Os dados só são salvos caso o usuário permita. Dados sigilosos como endereço não são expostos e excluídos automaticamente pelo sistema assim que visualizados pela equipe interna. Em caso de doações via Pix, será mostrado todo histórico na aba de extrato, e como o recurso foi utilizado, com total transparencia ao usuário.</p>
                   </div>
-                  <div class="col-12 col-md-3">
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum vel nisi amet quod architecto nulla quia, incidunt eaque harum, consequuntur consequatur quisquam dolore nobis odio maxime nostrum cumque hic rerum.</p>
-                  </div>
-                  <div class="col-12 col-md-2">
+                  <div class="col-12 col-md-5">
+                      <p>Em caso de dúvidas ou sugestões você pode entrar em contato diretamente com nossa equipe.</p>
                       <ul>
-                          <li><a class="footer-links" href="#">List one</a></li>
-                          <li><a class="footer-links" href="#">Page two</a></li>
-                          <li><a class="footer-links" href="#">Design</a></li>
-                          <li><a class="footer-links" href="#">Work</a></li>
-                          <li><a class="footer-links" href="#">Contact me</a></li>
-                      </ul>
+                        <li><a class="footer-links" href="#">Samuel Nunes - Desenvolvedor</a></li>
+                        <li><a class="footer-links" href="#">Ayrton Oshiro - Administrador do sistema</a></li>
+                    </ul>
                   </div>
               </div>
             </div>
@@ -247,5 +231,76 @@
     <script src="{!! asset('./jquery/dist/jquery.min.js') !!}"></script>
     <script src="{!! asset('./js/font-awesome.js') !!}"></script>
     <script src="{!! asset('./bootstrap/dist/js/bootstrap.bundle.min.js') !!}"></script>
+    <script>
+      $(function() {
+
+        $('.endereco, #errocep').hide()
+
+        $('#anonimo').on('change', function() {
+          if(this.checked)
+          {
+            $('.cadastro').hide(500)
+          }
+          else
+          {
+            $('.cadastro').show(500)
+          }
+        })
+
+        $('#tipoC').on('change', function() {
+          if (this.value == 0)
+          {
+            $('#tipoD').fadeIn()
+          }
+          else
+          {
+            $('#tipoD').fadeOut().toggleClass('col-8')
+          }
+        })
+
+        $('#tipoD').on('change', function() {
+          if($(this).children('select').val() == 1)
+          {
+            $('.endereco').fadeIn()
+          }
+          else
+          {
+            $('.endereco').hide(500)
+          }
+        })
+
+        $('[name="cep"]').on('keyup', function(e) {
+          if(this.value.length == 8)
+          {
+            $.ajax({
+              url: `https://viacep.com.br/ws/${this.value}/json/`,
+              crossDomain: true,
+              contentType: "application/json",
+              dataType: "json",
+              success: function (response) {
+                console.log(response)
+                if (!(response.erro))
+                {
+                  $('[name="rua"]').val(response.logradouro).attr('readonly', true)
+                  $('[name="bairro"]').val(response.bairro).attr('readonly', true)
+                  $('[name="cidade"]').val(response.localidade).attr('readonly', true)
+                }
+                else
+                {
+                  $('#errocep').show(500)
+                }
+              }
+            });
+          }
+          else
+          {
+            $('#errocep').fadeOut()
+            $('[name="rua"]').val('').attr('readonly', false)
+            $('[name="bairro"]').val('').attr('readonly', false)
+            $('[name="cidade"]').val('').attr('readonly', false)
+          }
+        })
+      })
+    </script>
 </body>
 </html>
