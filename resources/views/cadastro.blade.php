@@ -41,7 +41,7 @@
                 <span class="badge badge-danger h4" id="errocep">CEP não encontrado!</span>
                 <div class="row mb-2 endereco">
                     <div class="col-3 px-1">
-                        <input type="text" name="cep" class="form-control" maxlength="8" placeholder="CEP">
+                        <input type="text" name="cep" class="form-control" maxlength="9" placeholder="CEP">
                     </div>
                     <div class="col px-1">
                         <input type="text" name="rua" class="form-control" placeholder="Rua">
@@ -53,6 +53,14 @@
                     </div>
                     <div class="col-6 px-1">
                         <input type="text" name="cidade" class="form-control" placeholder="Cidade">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col px-1">
+                        <input type="text" name="zap" class="form-control" maxlength="13" placeholder="Whatsapp">
+                    </div>
+                    <div class="col-8 px-1">
+                        <input type="text" name="produto" class="form-control" placeholder="Produto">
                     </div>
                 </div>
             </form>

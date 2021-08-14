@@ -16,11 +16,11 @@ body {
     font-weight: 600;
 }
 .nav-link {
-    border-bottom: 1px dotted rgba(255, 255, 255, .2);
-    font-family: Montserrat;
-    text-transform: uppercase;
-    font-size: .8rem;
-    transition: all .5s ease;
+    border-bottom: 1px dotted rgba(255, 255, 255, .2) !important;
+    font-family: Montserrat !important;
+    text-transform: uppercase !important;
+    font-size: .8rem !important;
+    transition: all .5s ease !important;
     color: #fff !important;
 }
 .nav-link:hover {
@@ -114,8 +114,8 @@ body {
         background-color: transparent;
     }
     .nav-link {
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
         color: black !important;
     }
 }

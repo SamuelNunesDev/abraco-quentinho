@@ -24,32 +24,32 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto text-center">
           <li class="nav-item">
-            <a class="nav-link d-block py-2 px-4" href="#">
+            <a class="nav-link d-block py-2 px-4 btn">
              <i class='fas fa-home'></i> Home  
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-block py-2 px-4" href="#">
+            <a class="nav-link d-block py-2 px-4 btn">
               <i class='fas fa-hands-helping'></i> Colaborar 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-block py-2 px-4" href="#">
+            <a class="nav-link d-block py-2 px-4 btn">
               <i class='fas fa-diagnoses'></i> Sobre 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-block py-2 px-4" href="#">
+            <a class="nav-link d-block py-2 px-4 btn">
               <i class="fa fa-child"></i> Ações 
             </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link d-block py-2 px-4" href="#">
+              <a class="nav-link d-block py-2 px-4 btn">
                 <i class='fas fa-list-alt'></i> Extrato 
               </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-block py-2 px-4" href="#">
+            <a class="nav-link d-block py-2 px-4 btn">
               <i class='fas fa-comments'></i> Contate-nos 
             </a>
           </li>
@@ -71,7 +71,7 @@
         <div class="container">
           <h2 class="">Compartilhe Coisas Boas, Compartilhe Amor</h2>
           <p class="">Além da pandemia, nas últimas semanas estamos vivendo em um clima extremamente frio, e neste momento toda ajuda é bem vinda! Faça parte do nosso time colaborando!</p>
-          <a href="#" class="btn btn-primary">Quero Contribuir!</a>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">Quero Contribuir!</a>
         </div>
         <img class="img-fluid" src="{!! asset('./imagens/jumb1.jpeg') !!}" alt="pessoas se ajudando">
       </div>
@@ -109,7 +109,7 @@
                   <p class="rounded py-2 text-justify">Além da pandemia, nas últimas semanas estamos vivendo em um clima extremamente frio, e neste momento toda ajuda é bem vinda! Faça parte do nosso time colaborando!</p>
                 </div>
                 <div class="row justify-content-center">
-                  <a href="#" class="btn btn-outline-primary btn-lg offset-4">Quero Contribuir!</a>
+                  <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-toggle="modal" data-target="#modalCadastro">Quero Contribuir!</a>
                 </div>
               </div>
           </div>
@@ -129,7 +129,7 @@
           <div class="card-body">
             <h5 class="card-title">Roupas</h5>
             <p class="card-text pb-4">Neste frio nada melhor do que um agasalho bem aconchegante! 😄</p>
-            <a href="#" class="btn btn-primary bt-card">Doar Roupas!</a>
+            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Doar Roupas!</a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
@@ -137,7 +137,7 @@
           <div class="card-body">
             <h5 class="card-title">Alimentos</h5>
             <p class="card-text pb-4">Cestas básicas compostas por alimentos não perecíveis serão de grande ajuda! Lembre-se que qualquer ajuda é bem vinda! 🥰</p>
-            <a href="#" class="btn btn-primary bt-card">Doar Alimentos!</a>
+            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Doar Alimentos!</a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
@@ -145,7 +145,7 @@
           <div class="card-body">
             <h5 class="card-title">Seja um Voluntário!</h5>
             <p class="card-text pb-4">Você pode fazer parte do time também na linha de frente! 👊</p>
-            <a href="#" class="btn btn-primary bt-card">Ser Um Membro!</a>
+            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Ser Um Membro!</a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
@@ -153,14 +153,14 @@
           <div class="card-body">
             <h5 class="card-title">Pix</h5>
             <p class="card-text pb-4">Você pode ajudar também fazendo um pix. Você pode consultar todas as doações através do extrato, mostrando como ele foi utilizado. (gasolina pra locomoção, alimentos, roupas e etc) 💰</p>
-            <a href="#" class="btn btn-primary bt-card">Fazer Um Pix!</a>
+            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Fazer Um Pix!</a>
           </div>
         </div>
       </article>
     </section>
     <section class="container">
         <article class="row py-3">
-            <h2 class="border-bottom col pb-2 mb-3">Sobre plataforma "Abraço Quentinho" </h2>
+            <h2 class="border-bottom col pb-2 mb-3" id="sobre">Sobre plataforma "Abraço Quentinho" </h2>
             <p>A idéia surgiu após uma conversa no grupo da familia no whatsapp. Estavamos falando sobre o frio que tem feito nos últimos dias e sobre como deve ser difícil para quem não tem um teto pra se abrigar quando a noite chega. O projeto propõe o seguinte fluxo:</p>
             <div class="col-lg-6">
             <h4>1º Acesso ao site</h4>
@@ -185,24 +185,25 @@
               </ul>
               Este cadastro será mostrado na seção "Extrato", mostrando todo o histórico de colaborações realizadas. <strong>O endereço é um dado sigiloso e ficará salvo somente até a equipe visualizar, logo após será apagado automáticamente pelo sistema.</strong>
             </p>
-            <button class="btn btn-outline-primary">Fazer uma doação</button>
-            <button class="btn btn-outline-secondary">Fazer parte da equipe</button>
+            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalCadastro">Fazer uma doação</button>
+            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalCadastro">Fazer parte da equipe</button>
           </div>
           <div class="col">
             <img src="{!! asset('./imagens/diagrama.png') !!}" alt="imagem do diagrama">
           </div>
     </section>
         <section>
-            <h3 class="title py-4 mb-0 shadow"><strong>Ultimas Ações</strong></h3>
+            <h3 class="title py-4 mb-0 shadow" id="acoes"><strong>Ultimas Ações</strong></h3>
               <div class="container-fluid">
-                <div class="row">
-                  <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="" width="100%"  alt=""></a>
+                <div class="row justify-content-center">
+                 <!-- <a href="#" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-0 px-0"><img src="" width="100%"  alt=""></a> -->
+                 <h4 class="my-4">Nenhuma ação realizada até o momento :(</h4>
                 </div>
               </div>
         </section>
         <section class="container-fluid">
             <article class="row">
-                <div class="col-12 second-article text-center">
+                <div class="col-12 second-article text-center" id="extrato">
                     <h2>Seja o primeiro a colaborar!</h2>
                     <p>Nenhuma doação até o momento :(</p>
                 </div>
@@ -231,10 +232,50 @@
     <script src="{!! asset('./jquery/dist/jquery.min.js') !!}"></script>
     <script src="{!! asset('./js/font-awesome.js') !!}"></script>
     <script src="{!! asset('./bootstrap/dist/js/bootstrap.bundle.min.js') !!}"></script>
+    <script src="{!! asset('/js/jquery.mask.min.js') !!}"></script>
     <script>
       $(function() {
 
         $('.endereco, #errocep').hide()
+
+        let content = $('html, body')
+        let altura_colaborar = $('.card:first').position().top - 100
+        let altura_sobre = $('#sobre').position().top - 100
+        let altura_acoes = $('#acoes').position().top - 100
+        let altura_extrato = $('#extrato').position().top - 100
+        let altura_contate = $('footer').position().top
+
+        $(window).on('resize', function() {
+          altura_colaborar = $('.card:first').position().top - 100
+          altura_sobre = $('#sobre').position().top - 100
+          altura_acoes = $('#acoes').position().top - 100
+          altura_extrato = $('#extrato').position().top - 100
+          altura_contate = $('footer').position().top
+        })
+
+        $('li .nav-link:eq(0)').on('click', function() {
+          content.animate({scrollTop: 0}, 1000)
+        })
+
+        $('li .nav-link:eq(1)').on('click', function() {
+          content.animate({scrollTop: altura_colaborar}, 1000)
+        })
+
+        $('li .nav-link:eq(2)').on('click', function() {
+          content.animate({scrollTop: altura_sobre}, 1000)
+        })
+
+        $('li .nav-link:eq(3)').on('click', function() {
+          content.animate({scrollTop: altura_acoes}, 1000)
+        })
+
+        $('li .nav-link:eq(4)').on('click', function() {
+          content.animate({scrollTop: altura_extrato}, 1000)
+        })
+
+        $('li .nav-link:eq(5)').on('click', function() {
+          content.animate({scrollTop: altura_contate}, 1000)
+        })
 
         $('#anonimo').on('change', function() {
           if(this.checked)
@@ -251,17 +292,19 @@
           if (this.value == 0)
           {
             $('#tipoD').fadeIn()
+            $('[name="produto"]').fadeIn()
           }
           else
           {
             $('#tipoD').fadeOut().toggleClass('col-8')
+            $('[name="produto"]').fadeOut()
           }
         })
 
         $('#tipoD').on('change', function() {
           if($(this).children('select').val() == 1)
           {
-            $('.endereco').fadeIn()
+            $('.endereco').show(500)
           }
           else
           {
@@ -270,10 +313,14 @@
         })
 
         $('[name="cep"]').on('keyup', function(e) {
-          if(this.value.length == 8)
+          let cep = this.value
+          $(this).mask('99999-999')
+
+          if(cep.length == 9)
           {
+            cep.replace('-', '')
             $.ajax({
-              url: `https://viacep.com.br/ws/${this.value}/json/`,
+              url: `https://viacep.com.br/ws/${cep}/json/`,
               crossDomain: true,
               contentType: "application/json",
               dataType: "json",
@@ -299,6 +346,10 @@
             $('[name="bairro"]').val('').attr('readonly', false)
             $('[name="cidade"]').val('').attr('readonly', false)
           }
+        })
+
+        $('[name="zap"]').on('keyup', function() {
+          $(this).mask('99 99999-9999')
         })
       })
     </script>
