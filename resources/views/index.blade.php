@@ -73,7 +73,6 @@
           <p class="">Além da pandemia, nas últimas semanas estamos vivendo em um clima extremamente frio, e neste momento toda ajuda é bem vinda! Faça parte do nosso time colaborando!</p>
           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">Quero Contribuir!</a>
         </div>
-        <img class="img-fluid" src="{!! asset('./imagens/jumb1.jpeg') !!}" alt="pessoas se ajudando">
       </div>
     </section>
     <section>
@@ -90,7 +89,7 @@
                   <h5 class="rounded py-2">Faça parte do nosso projeto Abraço Quentinho</h5>
                 </div>
                 <div class="row justify-content-end">
-                  <p class="rounded py-2 text-justify">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e comida.</p>
+                  <p class="rounded py-2 text-justify">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e alimentos.</p>
                 </div>
                 <div class="row justify-content-center">
                   <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-target="#modalCadastro" data-toggle="modal">
@@ -277,25 +276,23 @@
           content.animate({scrollTop: altura_contate}, 1000)
         })
 
-        $('#anonimo').on('change', function() {
-          if(this.checked)
-          {
-            $('.cadastro').hide(500)
-          }
-          else
-          {
-            $('.cadastro').show(500)
-          }
-        })
-
         $('#tipoC').on('change', function() {
           if (this.value == 0)
           {
+            $('#anonimo').show(500)
             $('#tipoD').fadeIn()
             $('[name="produto"]').fadeIn()
+            if ($('#tipoD').children('select').val() == 1)
+            {
+              $('#tipoD').children('select').change()
+            }
+            
           }
           else
           {
+            $('#anonimo').fadeOut()
+            $('.endereco').fadeOut()
+            $('.campo-endereco').attr('required', false)
             $('#tipoD').fadeOut().toggleClass('col-8')
             $('[name="produto"]').fadeOut()
           }
@@ -305,10 +302,12 @@
           if($(this).children('select').val() == 1)
           {
             $('.endereco').show(500)
+            $('.campo-endereco').attr('required', true)
           }
           else
           {
             $('.endereco').hide(500)
+            $('.campo-endereco').attr('required', false)
           }
         })
 
@@ -348,7 +347,7 @@
           }
         })
 
-        $('[name="zap"]').on('keyup', function() {
+        $('[name="whatsapp"]').on('keyup', function() {
           $(this).mask('99 99999-9999')
         })
       })
