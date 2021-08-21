@@ -38,27 +38,19 @@ class ChamadosController extends Controller
         $dados = $request->all();
 
         $dados['whatsapp'] = str_replace('-', '', str_replace(' ', '', $dados['whatsapp']));
-        if (isset($dados['cep']))
-        {
+        if (isset($dados['cep'])) {
             $dados['cep'] = str_replace('-', '', $dados['cep']);
         }
-        if ($dados['tipoC'] == 0)
-        {
-            if ($dados['tipoD'] == 0)
-            {
+        if ($dados['tipoC'] == 0) {
+            if ($dados['tipoD'] == 0) {
                 $tipo_chamado = isset($dados['anonimo']) ? 0 : 1;
-            }
-            else
-            {
+            } else {
                 $tipo_chamado = isset($dados['anonimo']) ? 2 : 3;
             }
-        }
-        else
-        {
+        } else {
             $tipo_chamado = isset($dados['anonimo']) ? 4 : 5;
-        }
-        if (isset($dados['anonimo']))
-        {
+        } 
+        if (isset($dados['anonimo'])) {
             unset($dados['anonimo']);
         }
         unset($dados['_token']);
