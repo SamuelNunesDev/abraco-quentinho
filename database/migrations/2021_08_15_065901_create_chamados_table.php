@@ -17,7 +17,7 @@ class CreateChamadosTable extends Migration
             $table->id();
             $table->string('nome', 50);
             $table->tinyInteger('tipo_chamado');
-            $table->string('assumido_por', 50);
+            $table->string('assumido_por', 50)->nullable();
             $table->bigInteger('whatsapp');
             $table->text('produto')->nullable();
             $table->unsignedInteger('cep')->nullable();
