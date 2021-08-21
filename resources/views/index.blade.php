@@ -59,6 +59,7 @@
     </nav>
   </header>
   <main>
+    @include('breadcrumb')
     <section>
       <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-1 pt-4 pb-0 mb-0">
           <div class="container">

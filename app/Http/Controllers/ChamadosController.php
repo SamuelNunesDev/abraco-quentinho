@@ -48,7 +48,7 @@ class ChamadosController extends Controller
                 $tipo_chamado = isset($dados['anonimo']) ? 2 : 3;
             }
         } else {
-            $tipo_chamado = isset($dados['anonimo']) ? 4 : 5;
+            $tipo_chamado = 4;
         } 
         if (isset($dados['anonimo'])) {
             unset($dados['anonimo']);
@@ -59,8 +59,8 @@ class ChamadosController extends Controller
         $dados['tipo_chamado'] = $tipo_chamado;
 
         Chamados::create($dados);
-
-        return back()->with('success');
+        $message = 'Cadastro realizado com sucesso! Entraremos em contato assim que possível! Agradecemos sua colaboração 😄';
+        return back()->with($message);
     }
 
     /**

@@ -12,7 +12,7 @@
             <div class="modal-body">
                 <div class="row mb-2 ">
                     <div class="col-12 px-1">
-                        <input type="text" name="nome" class="form-control campo" placeholder="Nome"  required>
+                        <input type="text" name="nome" class="form-control campo" placeholder="Nome" required>
                     </div>
                 </div>
                 <div class="row mb-2 ">
