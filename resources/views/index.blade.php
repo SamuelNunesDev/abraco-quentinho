@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="{!! asset('./css/style.css') !!}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="{!! asset('./imagens/favicon.ico') !!}" type="image/x-icon">
+    <script src="{!! asset('./jquery/dist/jquery.min.js') !!}"></script>
     <title>Abraço Quentinho</title>
 </head>
 <body>
   @include('cadastro')
+  @include('breadcrumb')
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 px-0 shadow">
       <a class="navbar-brand col-3 text-light text-justify pt-3 pb-2 px-4" href="#">
@@ -59,7 +61,6 @@
     </nav>
   </header>
   <main>
-    @include('breadcrumb')
     <section>
       <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-1 pt-4 pb-0 mb-0">
           <div class="container">
@@ -230,7 +231,6 @@
             </div>
         </footer>
     </main>
-    <script src="{!! asset('./jquery/dist/jquery.min.js') !!}"></script>
     <script src="{!! asset('./js/font-awesome.js') !!}"></script>
     <script src="{!! asset('./bootstrap/dist/js/bootstrap.bundle.min.js') !!}"></script>
     <script src="{!! asset('/js/jquery.mask.min.js') !!}"></script>

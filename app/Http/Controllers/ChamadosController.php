@@ -35,32 +35,37 @@ class ChamadosController extends Controller
      */
     public function store(Request $request)
     {
-        $dados = $request->all();
+        try {
+            $dados = $request->all();
 
-        $dados['whatsapp'] = str_replace('-', '', str_replace(' ', '', $dados['whatsapp']));
-        if (isset($dados['cep'])) {
-            $dados['cep'] = str_replace('-', '', $dados['cep']);
-        }
-        if ($dados['tipoC'] == 0) {
-            if ($dados['tipoD'] == 0) {
-                $tipo_chamado = isset($dados['anonimo']) ? 0 : 1;
-            } else {
-                $tipo_chamado = isset($dados['anonimo']) ? 2 : 3;
+            $dados['whatsapp'] = str_replace('-', '', str_replace(' ', '', $dados['whatsapp']));
+            if (isset($dados['cep'])) {
+                $dados['cep'] = str_replace('-', '', $dados['cep']);
             }
-        } else {
-            $tipo_chamado = 4;
-        } 
-        if (isset($dados['anonimo'])) {
-            unset($dados['anonimo']);
-        }
-        unset($dados['_token']);
-        unset($dados['tipoC']);
-        unset($dados['tipoD']);
-        $dados['tipo_chamado'] = $tipo_chamado;
+            if ($dados['tipoC'] == 0) {
+                if ($dados['tipoD'] == 0) {
+                    $tipo_chamado = isset($dados['anonimo']) ? 0 : 1;
+                } else {
+                    $tipo_chamado = isset($dados['anonimo']) ? 2 : 3;
+                }
+            } else {
+                $tipo_chamado = 4;
+            } 
+            if (isset($dados['anonimo'])) {
+                unset($dados['anonimo']);
+            }
+            unset($dados['_token']);
+            unset($dados['tipoC']);
+            unset($dados['tipoD']);
+            $dados['tipo_chamado'] = $tipo_chamado;
+            $dados['status'] = 0;
 
-        Chamados::create($dados);
-        $message = 'Cadastro realizado com sucesso! Entraremos em contato assim que possível! Agradecemos sua colaboração 😄';
-        return back()->with($message);
+            Chamados::create($dados);
+        } catch (Exception $e) {
+            return back()->with('error', 'Houve um erro ao realizar o cadastro, contate algum administrador do sistema. 😔');
+        }
+
+        return back()->with('success', "Cadastro realizado com sucesso! Entraremos em contato assim que possível! Agradecemos sua colaboração {$dados['nome']} 😄");
     }
 
     /**

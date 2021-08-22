@@ -14,9 +14,9 @@ class CreateChamadosTable extends Migration
     public function up()
     {
         Schema::create('chamados', function (Blueprint $table) {
-            $table->id();
+            $table->id('chamado_id');
             $table->string('nome', 50);
-            $table->tinyInteger('tipo_chamado');
+            $table->unsignedTinyInteger('tipo_chamado');
             $table->string('assumido_por', 50)->nullable();
             $table->bigInteger('whatsapp');
             $table->text('produto')->nullable();
@@ -26,7 +26,10 @@ class CreateChamadosTable extends Migration
             $table->string('cidade', 30)->nullable();
             $table->unsignedSmallInteger('numero')->nullable();
             $table->string('complemento', 50)->nullable();
+            $table->unsignedTinyInteger('status');
             $table->timestamps();
+
+            $table->foreign('tipo_chamado')->references('tipo_chamados_id')->on('tipo_chamados');
         });
     }
 

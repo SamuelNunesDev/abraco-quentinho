@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChamadosController;
+use App\Http\Controllers\ChamadosAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,3 +16,7 @@ use App\Http\Controllers\ChamadosController;
 
 Route::get('/', [ChamadosController::class, 'index'])->name('index');
 Route::post('/salvar', [ChamadosController::class, 'store'])->name('store');
+
+Route::prefix('admin')->group(function () {
+    Route::get('/', [ChamadosAdminController::class, 'index'])->name('admin.index');
+});
