@@ -1,10 +1,10 @@
-e<?php
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableTipoChamadosTable extends Migration
+class CreateTiposChamadoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class CreateTableTipoChamadosTable extends Migration
     {
         Schema::create('tipos_chamado', function (Blueprint $table) {
             $table->unsignedTinyInteger('tipo_chamado_id', true);
-            $table->string('descricao', 50);
+            $table->string('descricao', 70);
             $table->timestamps();
         });
     }
