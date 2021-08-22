@@ -11,7 +11,7 @@ class Chamados extends Model
 
     protected $table = 'chamados';
     protected $fillable = [
-        'id',
+        'chamado_id',
         'nome',
         'tipo_chamado',
         'produto',
