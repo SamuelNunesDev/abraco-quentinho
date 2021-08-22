@@ -13,7 +13,7 @@ class CreateTableTipoChamadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_chamados', function (Blueprint $table) {
+        Schema::create('tipos_chamado', function (Blueprint $table) {
             $table->unsignedTinyInteger('tipo_chamado_id', true);
             $table->string('descricao', 50);
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateTableTipoChamadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_chamados');
+        Schema::dropIfExists('tipos_chamado');
     }
 }
