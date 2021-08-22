@@ -29,7 +29,7 @@ class CreateChamadosTable extends Migration
             $table->unsignedTinyInteger('status');
             $table->timestamps();
 
-            $table->foreign('tipo_chamado')->references('tipo_chamados_id')->on('tipo_chamados');
+            $table->foreign('tipo_chamado')->references('tipo_chamado_id')->on('tipo_chamados');
         });
     }
 
