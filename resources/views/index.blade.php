@@ -225,6 +225,7 @@
                       <ul>
                         <li><a class="footer-links" href="#">Samuel Nunes - Desenvolvedor</a></li>
                         <li><a class="footer-links" href="#">Ayrton Oshiro - Administrador do sistema</a></li>
+                        <li><a class="footer-links" href="#">Laila Maria - Administradora do sistema</a></li>
                     </ul>
                   </div>
               </div>
