@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="{!! asset('./css/style.css') !!}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="{!! asset('./imagens/favicon.ico') !!}" type="image/x-icon">
+    <link rel="stylesheet" href="{!! asset('bootstrap-icons/font/bootstrap-icons.css') !!}">
     <script src="{!! asset('./jquery/dist/jquery.min.js') !!}"></script>
     <title>Abraço Quentinho</title>
 </head>
 <body>
-  @include('cadastro')
-  @include('breadcrumb')
+  @include('components.cadastro')
+  @include('components.breadcrumb')
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 px-0 shadow">
       <a class="navbar-brand col-3 text-light text-justify pt-3 pb-2 px-4" href="#">
@@ -47,16 +48,14 @@
             </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link d-block py-2 px-4 btn">
-                <i class='fas fa-list-alt'></i> Extrato 
-              </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link d-block py-2 px-4 btn">
               <i class='fas fa-comments'></i> Contate-nos 
             </a>
           </li>
         </ul>
+          <a href="{!! route('login') !!}" class="d-block py-1 mx-5 px-3 btn btn-success">
+            <i class="bi bi-door-open"></i> Entrar
+          </a>
       </div>
     </nav>
   </header>

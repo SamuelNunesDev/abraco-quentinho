@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chamados;
+use Exception;
 use Illuminate\Http\Request;
+use App\Models\TipoChamados;
 
 class ChamadosController extends Controller
 {
@@ -44,19 +46,14 @@ class ChamadosController extends Controller
             }
             if ($dados['tipoC'] == 0) {
                 if ($dados['tipoD'] == 0) {
-                    $tipo_chamado = isset($dados['anonimo']) ? 0 : 1;
+                    $tipo_chamado = isset($dados['anonimo']) ? TipoChamados::DOACAO_ENTREGA_ANONIMA : TipoChamados::DOACAO_ENTREGA;
                 } else {
-                    $tipo_chamado = isset($dados['anonimo']) ? 2 : 3;
+                    $tipo_chamado = isset($dados['anonimo']) ? TipoChamados::DOACAO_HOME_ANONIMA : TipoChamados::DOACAO_HOME;
                 }
             } else {
-                $tipo_chamado = 4;
+                $tipo_chamado = TipoChamados::SER_COLABORADOR;
             } 
-            if (isset($dados['anonimo'])) {
-                unset($dados['anonimo']);
-            }
-            unset($dados['_token']);
-            unset($dados['tipoC']);
-            unset($dados['tipoD']);
+
             $dados['tipo_chamado'] = $tipo_chamado;
             $dados['status'] = 0;
 

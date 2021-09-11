@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChamadosController;
 use App\Http\Controllers\ChamadosAdminController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +15,18 @@ use App\Http\Controllers\ChamadosAdminController;
 |
 */
 
+//rotas usuario
 Route::get('/', [ChamadosController::class, 'index'])->name('index');
 Route::post('/salvar', [ChamadosController::class, 'store'])->name('store');
 
+//rotas admin
 Route::prefix('admin')->group(function () {
     Route::get('/', [ChamadosAdminController::class, 'index'])->name('admin.index');
+});
+
+//rotas login
+Route::prefix('login')->group(function() {
+    Route::get('/', [AuthController::class, 'login'])->name('login');
+    Route::post('/do', [AuthController::class, 'do'])->name('login.do');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('login.logout');
 });

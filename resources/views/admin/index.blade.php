@@ -19,7 +19,7 @@
         Abraço Quentinho
       </a>
       <div class="navbar-nav px-3">
-        <a  class="nav-item nav-link text-nowrap" href="#">Sair</a>
+        <a class="nav-item nav-link text-nowrap" href="{!! route('login.logout') !!}">Sair</a>
       </div>   
     </header>
     <nav class="col-2 bg-light sidebar shadow">
@@ -49,6 +49,3 @@
           </table>
         </section>
     </main> 
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
