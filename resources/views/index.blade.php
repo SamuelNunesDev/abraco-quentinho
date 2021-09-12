@@ -53,8 +53,8 @@
             </a>
           </li>
         </ul>
-          <a href="{!! route('login') !!}" class="d-block py-1 mx-5 px-3 btn btn-success">
-            <i class="bi bi-door-open"></i> Entrar
+          <a href="{!! route('login') !!}" class="d-flex m-auto py-1 px-3 btn btn-primary">
+            <i class="bi bi-door-open"></i>&nbsp; Entrar
           </a>
       </div>
     </nav>

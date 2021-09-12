@@ -19,7 +19,8 @@ class ChamadosAdminController extends Controller
                                 'chamados.chamado_id as id',
                                 'tc.descricao as tipo_chamado',
                                 'chamados.nome as nome',
-                                'chamados.status as status'
+                                'chamados.status as status',
+                                'chamados.produto as produto'
                                         )
                             ->get();
 

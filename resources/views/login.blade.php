@@ -35,7 +35,7 @@
           <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Digite sua senha" required>
         </div>
         <button type="submit" class="btn btn-success">
-            <i class="bi bi-check-lg"></i> Entrar
+            <i class="bi bi-check-lg"></i> &nbsp; Entrar
         </button>
       </form>
       <script src="{!! asset('jquery/dist/jquery.min.js') !!}"></script>
