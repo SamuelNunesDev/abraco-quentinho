@@ -19,7 +19,7 @@
                     <div class="col px-1">
                         <select class="custom-select" id="tipoC" name="tipoC">
                             <option value="0">Doar</option>
-                            <option value="1">Ser um Colaborador</option>
+                            <option value="1">Fazer parte do time de entregas</option>
                         </select>
                     </div>
                     <div class="col-9 px-1 " id="tipoD">

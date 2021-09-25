@@ -25,44 +25,23 @@
     <nav class="col-2 bg-light sidebar shadow">
         <ul class="nav flex-column">
           <li class="nav-item list">
-            <a class="nav-link active" href="#">Chamados</a>
+            <a class="nav-link" href="{!! route('admin.chamados') !!}" id="menu-chamados">Chamados</a>
           </li>
           <li class="nav-item list">
-            <a></a>
+            <a class="nav-link" href="{!! route('admin.usuarios') !!}" id="menu-usuarios">Usuários</a>
           </li>
         </ul>
-    </nav>   
-    <main role="main" class="col-10 main px-4">
-        <div class="d-flex justify-content-between align-items-center mt-1 pb-2">
-          <h1 class="h2">Chamados</h1>
-        </div>
-          <table class="table table-stripped table-hover" id="chamados">
-            <thead>
-              <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Tipo Chamado</th>
-                <th scope="col">Produto</th>
-              </tr>
-            </thead>
-          </table>
-    </main>
+    </nav>
+
+    @yield('content')
+
     <script src="{!! asset('jquery/dist/jquery.min.js') !!}"></script>
     <script src="{!! asset('bootstrap/dist/js/bootstrap.bundle.min.js') !!}"></script>
     <script src="{!! asset('datatables.net/js/jquery.dataTables.min.js') !!}"></script>
     <script src="{!! asset('datatables.net-bs4/js/dataTables.bootstrap4.min.js') !!}"></script>
-    <script>
-      $(document).ready(function() {
-        let chamados = $('#chamados').DataTable({
-          ajax: {
-            url: '{!! route('admin.index') !!}'
-          },
-          columns: [
-            {data: 'nome', name: 'nome'},
-            {data: 'tipo_chamado', name: 'tipo_chamado'},
-            {data: 'produto', name: 'produto'}
-          ]
-        })
-      })
-    </script>
-  </body>
+
+    @yield('javascript')
+
+</body>
 </html>
+    

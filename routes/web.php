@@ -21,7 +21,9 @@ Route::post('/salvar', [ChamadosController::class, 'store'])->name('store');
 
 //rotas admin
 Route::prefix('admin')->group(function () {
-    Route::get('/', [ChamadosAdminController::class, 'index'])->name('admin.index');
+    Route::get('/chamados', [ChamadosAdminController::class, 'chamados'])->name('admin.chamados');
+    Route::get('/usuarios', [ChamadosAdminController::class, 'usuarios'])->name('admin.usuarios');
+    Route::post('/usuarios/cadastrar', [ChamadosAdminController::class, 'cadastrar'])->name('admin.usuarios.cadastrar');
 });
 
 //rotas login

@@ -10,7 +10,7 @@ class AuthController extends Controller
     public function login()
     {
         if( Auth::check() ) {
-            return redirect()->route('admin.index');
+            return redirect()->route('admin.chamados');
         }
         return view('login');
     }
@@ -21,7 +21,7 @@ class AuthController extends Controller
             'password' => $request->password
         ];
         if( Auth::attempt($credentials) ) {
-            return redirect()->route('admin.index');
+            return redirect()->route('admin.chamados');
         }
 
         return back()->with('error', 'E-mail ou senha inválida.');

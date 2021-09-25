@@ -18,7 +18,7 @@
   @include('components.breadcrumb')
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 px-0 shadow">
-      <a class="navbar-brand col-3 text-light text-justify pt-3 pb-2 px-4" href="#">
+      <a class="navbar-brand col-3 text-light text-justify pt-3 pb-2 px-4" href="#" id="brand-logo">
         <img class="pb-2" src="{!! asset('./imagens/coracao-logo.png') !!}" alt="">
         Abraço Quentinho
       </a>
@@ -153,7 +153,7 @@
           <img class="card-img-top" src="{!! asset('./imagens/card4.jpg') !!}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Pix</h5>
-            <p class="card-text pb-4">Você pode ajudar também fazendo um pix. Você pode consultar todas as doações através do extrato, mostrando como ele foi utilizado. (gasolina pra locomoção, alimentos, roupas e etc) 💰</p>
+            <p class="card-text pb-4">Você pode ajudar também fazendo um pix. Você pode consultar todas as doações através da sessão "Ações", mostrando como ele foi utilizado. (gasolina pra locomoção, alimentos, roupas e etc) 💰</p>
             <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Fazer Um Pix!</a>
           </div>
         </div>
@@ -175,7 +175,7 @@
                     <li>Aguardar pela equipe buscar a doação em sua casa.</li>
                   </ul>
                 </li>
-                <li>Ser um membro do time de voluntários.</li>
+                <li>Ser um membro do time de entregas.</li>
               </ul>
             </p>
             <h4>3º Cadastro Rápido</h4>
@@ -184,7 +184,7 @@
                 <li>O colaborador que optar por fazer uma doação entregando em um ponto de recolhimento e não quer se identificar, não faz o cadastro.</li>
                 <li>O cadastro consiste em 3 informações basicamente: O nome do colaborador, o produto nos casos de doações e o endereço caso o colaborador opte por aguardar a equipe em sua casa.</li>
               </ul>
-              Este cadastro será mostrado na seção "Extrato", mostrando todo o histórico de colaborações realizadas. <strong>O endereço é um dado sigiloso e ficará salvo somente até a equipe visualizar, logo após será apagado automáticamente pelo sistema.</strong>
+              Este cadastro será mostrado na seção "Ações", mostrando todo o histórico de colaborações realizadas. <strong>O endereço é um dado sigiloso e ficará salvo somente até a equipe visualizar, logo após será apagado automáticamente pelo sistema.</strong>
             </p>
             <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalCadastro">Fazer uma doação</button>
             <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalCadastro">Fazer parte da equipe</button>
@@ -217,14 +217,13 @@
                       <p>Abraço Quentinho</p>
                   </div>
                   <div class="col-12 col-md-5">
-                      <p>A plataforma "Abraço Quentinho" não possui fins lucrativos e é 100% colaborativa. Os dados só são salvos caso o usuário permita. Dados sigilosos como endereço não são expostos e excluídos automaticamente pelo sistema assim que visualizados pela equipe interna. Em caso de doações via Pix, será mostrado todo histórico na aba de extrato, e como o recurso foi utilizado, com total transparencia ao usuário.</p>
+                      <p>A plataforma "Abraço Quentinho" não possui fins lucrativos e é 100% colaborativa. Os dados só são salvos caso o usuário permita. Dados sigilosos como endereço não são expostos e excluídos automaticamente pelo sistema assim que visualizados pela equipe interna. Em caso de doações via Pix, será mostrado todo histórico na aba de ações, e como o recurso foi utilizado, com total transparencia ao usuário.</p>
                   </div>
                   <div class="col-12 col-md-5">
                       <p>Em caso de dúvidas ou sugestões você pode entrar em contato diretamente com nossa equipe.</p>
                       <ul>
-                        <li><a class="footer-links" href="#">Samuel Nunes - Desenvolvedor</a></li>
-                        <li><a class="footer-links" href="#">Ayrton Oshiro - Administrador do sistema</a></li>
-                        <li><a class="footer-links" href="#">Laila Maria - Administradora do sistema</a></li>
+                        <li><a class="footer-links" href="#">Samuel Nunes - Desenvolvedor do sistema</a></li>
+                        <li><a class="footer-links" href="#">Lucas Queiroz - Administrador do sistema</a></li>
                     </ul>
                   </div>
               </div>
@@ -254,7 +253,7 @@
           altura_contate = $('footer').position().top
         })
 
-        $('li .nav-link:eq(0)').on('click', function() {
+        $('li .nav-link:eq(0), #brand-logo').on('click', function() {
           content.animate({scrollTop: 0}, 1000)
         })
 

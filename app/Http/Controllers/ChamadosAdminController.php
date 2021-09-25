@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Chamados;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\DataTables;
 
 class ChamadosAdminController extends Controller
 {
-    public function index(Request $request)
+    public function chamados(Request $request)
     {
         if( !(Auth::check()) ) {
             return redirect()->route('login');
@@ -27,6 +29,20 @@ class ChamadosAdminController extends Controller
         if( $request->ajax() != null )
             return DataTables::of($chamados)->make(true);
         
-        return view('admin.index');
+        return view('admin.chamados');
+    }
+    public function usuarios()
+    {
+        return view('admin.usuarios');
+    }
+    public function cadastrar(Request $request)
+    {
+        $user = new User();
+        $user->name = $request->user;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect()->route('admin.usuarios');
     }
 }
