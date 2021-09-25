@@ -27,9 +27,11 @@
           <li class="nav-item list">
             <a class="nav-link" href="{!! route('admin.chamados') !!}" id="menu-chamados">Chamados</a>
           </li>
-          <li class="nav-item list">
-            <a class="nav-link" href="{!! route('admin.usuarios') !!}" id="menu-usuarios">Usuários</a>
-          </li>
+          @if(Auth::user()->email === 'sammoc11@hotmail.com')
+            <li class="nav-item list">
+              <a class="nav-link" href="{!! route('admin.usuarios') !!}" id="menu-usuarios">Usuários</a>
+            </li>
+          @endif
         </ul>
     </nav>
 
