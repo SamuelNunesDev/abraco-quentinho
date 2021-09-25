@@ -33,6 +33,10 @@ class ChamadosAdminController extends Controller
     }
     public function usuarios()
     {
+        if( !(Auth::check()) ) {
+            return redirect()->route('login');
+        }
+        
         return view('admin.usuarios');
     }
     public function cadastrar(Request $request)
