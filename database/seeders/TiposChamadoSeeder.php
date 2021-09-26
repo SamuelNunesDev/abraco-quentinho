@@ -15,11 +15,16 @@ class TiposChamadoSeeder extends Seeder
     public function run()
     {
         DB::table('tipos_chamado')->insert([
-            ['descricao' => 'Doação => Entregar em um ponto de recolhimento'],
-            ['descricao' => 'Doação Anonima => Entregar em um ponto de recolhimento'],
-            ['descricao' => 'Doação => Aguardar pela equipe em casa'],
-            ['descricao' => 'Doação Anonima => Aguardar pela equipe em casa'],
-            ['descricao' => 'Fazer parte do time de voluntarios']
+            ['descricao' => 'Doação - Entregar em um ponto de recolhimento'],
+            ['descricao' => 'Doação Anonima - Entregar em um ponto de recolhimento'],
+            ['descricao' => 'Doação - Aguardar pela equipe em casa'],
+            ['descricao' => 'Doação Anonima - Aguardar pela equipe em casa'],
+            ['descricao' => 'Fazer parte do time de voluntarios'],
+            ['descricao' => 'Ajuda - Financeira'],
+            ['descricao' => 'Ajuda - Psicológica'],
+            ['descricao' => 'Ajuda - Espiritual'],
+            ['descricao' => 'Ajuda - Alimentos'],
+            ['descricao' => 'Ajuda - Roupas']
         ]);
     }
 }

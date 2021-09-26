@@ -76,8 +76,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Fechar</button>
                 <button type="submit" class="btn btn-success">
-                    <i class="fa fa-save"></i>
-                    Salvar Cadastro
+                    <i class="fa fa-save"></i>&nbsp; Salvar Cadastro
                 </button>
             </div>
         </form>

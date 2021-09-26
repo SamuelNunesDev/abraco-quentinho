@@ -14,6 +14,7 @@ class Chamados extends Model
         'chamado_id',
         'nome',
         'tipo_chamado',
+        'assumido_por',
         'produto',
         'whatsapp',
         'cep',
@@ -27,4 +28,7 @@ class Chamados extends Model
         'updated_at'
     ];
     protected $primaryKey = 'chamado_id';
+
+    const STATUS_EM_ANDAMENTO = 1;
+    const STATUS_FECHADO = 2;
 }

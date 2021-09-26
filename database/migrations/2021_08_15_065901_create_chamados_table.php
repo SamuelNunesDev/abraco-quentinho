@@ -26,7 +26,7 @@ class CreateChamadosTable extends Migration
             $table->string('cidade', 30)->nullable();
             $table->unsignedSmallInteger('numero')->nullable();
             $table->string('complemento', 50)->nullable();
-            $table->unsignedTinyInteger('status');
+            $table->unsignedTinyInteger('status')->default(0);
             $table->timestamps();
 
             $table->foreign('tipo_chamado')->references('tipo_chamado_id')->on('tipos_chamado');

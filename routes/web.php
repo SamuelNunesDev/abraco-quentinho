@@ -18,12 +18,15 @@ use App\Http\Controllers\AuthController;
 //rotas usuario
 Route::get('/', [ChamadosController::class, 'index'])->name('index');
 Route::post('/salvar', [ChamadosController::class, 'store'])->name('store');
+Route::post('/salvar/ajuda', [ChamadosController::class, 'storeHelp'])->name('store.ajuda');
 
 //rotas admin
 Route::prefix('admin')->group(function () {
     Route::get('/chamados', [ChamadosAdminController::class, 'chamados'])->name('admin.chamados');
     Route::get('/usuarios', [ChamadosAdminController::class, 'usuarios'])->name('admin.usuarios');
     Route::post('/usuarios/cadastrar', [ChamadosAdminController::class, 'cadastrar'])->name('admin.usuarios.cadastrar');
+    Route::put('chamados/{chamado}', [ChamadosAdminController::class, 'responsavel'])->name('admin.chamados.responsavel');
+    Route::put('chamados/fechar/{chamado}', [ChamadosAdminController::class, 'fechar'])->name('admin.chamados.fechar');
 });
 
 //rotas login

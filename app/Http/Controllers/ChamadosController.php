@@ -71,7 +71,7 @@ class ChamadosController extends Controller
      * @param  \App\Models\chamados  $chamados
      * @return \Illuminate\Http\Response
      */
-    public function show(chamados $chamados)
+    public function show(Chamados $chamados)
     {
         //
     }
@@ -82,7 +82,7 @@ class ChamadosController extends Controller
      * @param  \App\Models\chamados  $chamados
      * @return \Illuminate\Http\Response
      */
-    public function edit(chamados $chamados)
+    public function edit(Chamados $chamados)
     {
         //
     }
@@ -94,7 +94,7 @@ class ChamadosController extends Controller
      * @param  \App\Models\chamados  $chamados
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, chamados $chamados)
+    public function update(Request $request, Chamados $chamados)
     {
         //
     }
@@ -105,8 +105,18 @@ class ChamadosController extends Controller
      * @param  \App\Models\chamados  $chamados
      * @return \Illuminate\Http\Response
      */
-    public function destroy(chamados $chamados)
+    public function destroy(Chamados $chamados)
     {
         //
+    }
+    public function storeHelp(Request $request)
+    {
+        $chamado = new Chamados();
+        $chamado->nome = $request->nome;
+        $chamado->tipo_chamado = $request->tipo_chamado;
+        $chamado->whatsapp = str_replace(' ', '', str_replace('-', '', $request->whatsapp));
+        $chamado->save();
+        
+        return back()->with('success', 'Sua solicitação foi enviada com sucesso, entraremmos em contato assim que possível '.$request->nome.'. 😄');
     }
 }

@@ -15,12 +15,16 @@
 </head>
 <body>
   @include('components.cadastro')
-  @include('components.breadcrumb')
+  @include('components.alert')
+  @include('components.cadastro_ajuda')
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 px-0 shadow">
-      <a class="navbar-brand col-3 text-light text-justify pt-3 pb-2 px-4" href="#" id="brand-logo">
-        <img class="pb-2" src="{!! asset('./imagens/coracao-logo.png') !!}" alt="">
-        Abraço Quentinho
+      <a class="navbar-brand col-3 text-light text-center pt-3 px-4" href="#" id="brand-logo">
+        <div class="row">
+          <div class="col mt-2">
+            <img class="pb-3" src="{!! asset('./imagens/coracao-logo.png') !!}" alt="logo de coração"> Abraço Quentinho
+          </div>
+        </div>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,7 +57,7 @@
             </a>
           </li>
         </ul>
-          <a href="{!! route('login') !!}" class="d-flex m-auto py-1 px-3 btn btn-primary">
+          <a href="{!! route('login') !!}" class="d-flex m-auto py-1 px-3 btn btn-primary justify-content-center">
             <i class="bi bi-door-open"></i>&nbsp; Entrar
           </a>
       </div>
@@ -95,7 +99,7 @@
                 </div>
                 <div class="row justify-content-center">
                   <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-target="#modalCadastro" data-toggle="modal">
-                    Quero Participar!
+                    <i class="bi bi-emoji-smile"></i> Quero Participar!
                   </a>
                 </div>
               </div>
@@ -110,7 +114,9 @@
                   <p class="rounded py-2 text-justify">Além da pandemia, nas últimas semanas estamos vivendo em um clima extremamente frio, e neste momento toda ajuda é bem vinda! Faça parte do nosso time colaborando!</p>
                 </div>
                 <div class="row justify-content-center">
-                  <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-toggle="modal" data-target="#modalCadastro">Quero Contribuir!</a>
+                  <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-toggle="modal" data-target="#modalCadastro">
+                    <i class="bi bi-emoji-smile"></i> Quero Contribuir!
+                  </a>
                 </div>
               </div>
           </div>
@@ -130,7 +136,9 @@
           <div class="card-body">
             <h5 class="card-title">Roupas</h5>
             <p class="card-text pb-4">Neste frio nada melhor do que um agasalho bem aconchegante! 😄</p>
-            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Doar Roupas!</a>
+            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">
+              <i class="bi bi-basket"></i>&nbsp; Doar Roupas!
+            </a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
@@ -138,7 +146,9 @@
           <div class="card-body">
             <h5 class="card-title">Alimentos</h5>
             <p class="card-text pb-4">Cestas básicas compostas por alimentos não perecíveis serão de grande ajuda! Lembre-se que qualquer ajuda é bem vinda! 🥰</p>
-            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Doar Alimentos!</a>
+            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">
+              <i class="bi bi-cart4"></i>&nbsp; Doar Alimentos!
+            </a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
@@ -146,7 +156,9 @@
           <div class="card-body">
             <h5 class="card-title">Seja um Voluntário!</h5>
             <p class="card-text pb-4">Você pode fazer parte do time também na linha de frente! 👊</p>
-            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Ser Um Membro!</a>
+            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">
+              <i class="bi bi-person-check"></i>&nbsp; Ser Um Membro!
+            </a>
           </div>
         </div>
         <div class="card col-10 col-lg-3 col-md-5">
@@ -154,11 +166,25 @@
           <div class="card-body">
             <h5 class="card-title">Pix</h5>
             <p class="card-text pb-4">Você pode ajudar também fazendo um pix. Você pode consultar todas as doações através da sessão "Ações", mostrando como ele foi utilizado. (gasolina pra locomoção, alimentos, roupas e etc) 💰</p>
-            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">Fazer Um Pix!</a>
+            <a href="#" class="btn btn-primary bt-card" data-toggle="modal" data-target="#modalCadastro">
+              <i class="bi bi-cash-coin"></i>&nbsp; Fazer Um Pix!
+            </a>
           </div>
         </div>
       </article>
     </section>
+    <article class="row my-5">
+      <div class="col-12 second-article border-0 text-center" id="extrato">
+        <h2 class="mb-4">Está precisando de ajuda? Fale Conosco!</h2>
+        <p>
+          <i class="h5">"Acreditar em si mesmo é muito importante, mas uma ajudinha de outras pessoas pode ser uma grande bênção." -Iroh</i>
+        </p>
+        <p>Caso necessite você pode solicitar roupas, alimentos ou uma ajuda financeira, psicologica e espiritual.</p>
+        <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#cadastro-ajuda">
+          <i class="bi bi-chat-right-dots"></i>&nbsp; Solicitar ajuda
+        </button>
+      </div>
+    </article>
     <section class="container">
         <article class="row py-3">
             <h2 class="border-bottom col pb-2 mb-3" id="sobre">Sobre plataforma "Abraço Quentinho" </h2>
@@ -186,8 +212,12 @@
               </ul>
               Este cadastro será mostrado na seção "Ações", mostrando todo o histórico de colaborações realizadas. <strong>O endereço é um dado sigiloso e ficará salvo somente até a equipe visualizar, logo após será apagado automáticamente pelo sistema.</strong>
             </p>
-            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalCadastro">Fazer uma doação</button>
-            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalCadastro">Fazer parte da equipe</button>
+            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalCadastro">
+              <i class="bi bi-handbag"></i>&nbsp; Fazer uma doação
+            </button>
+            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalCadastro">
+              <i class="bi bi-person-check"></i>&nbsp; Fazer parte da equipe
+            </button>
           </div>
           <div class="col">
             <img src="{!! asset('./imagens/diagrama.png') !!}" alt="imagem do diagrama">
@@ -278,19 +308,15 @@
         })
 
         $('#tipoC').on('change', function() {
-          if (this.value == 0)
-          {
+          if (this.value == 0) {
             $('#anonimo').show(500)
             $('#tipoD').fadeIn()
             $('[name="produto"]').fadeIn()
-            if ($('#tipoD').children('select').val() == 1)
-            {
+            if ($('#tipoD').children('select').val() == 1) {
               $('#tipoD').children('select').change()
             }
             
-          }
-          else
-          {
+          } else {
             $('#anonimo').fadeOut()
             $('.endereco').fadeOut()
             $('.campo-endereco').attr('required', false)
@@ -300,13 +326,10 @@
         })
 
         $('#tipoD').on('change', function() {
-          if($(this).children('select').val() == 1)
-          {
+          if($(this).children('select').val() == 1) {
             $('.endereco').show(500)
             $('.campo-endereco').attr('required', true)
-          }
-          else
-          {
+          } else {
             $('.endereco').hide(500)
             $('.campo-endereco').attr('required', false)
           }
@@ -316,8 +339,7 @@
           let cep = this.value
           $(this).mask('99999-999')
 
-          if(cep.length == 9)
-          {
+          if(cep.length == 9) {
             cep.replace('-', '')
             $.ajax({
               url: `https://viacep.com.br/ws/${cep}/json/`,
@@ -326,21 +348,16 @@
               dataType: "json",
               success: function (response) {
                 console.log(response)
-                if (!(response.erro))
-                {
+                if (!(response.erro)) {
                   $('[name="rua"]').val(response.logradouro).attr('readonly', true)
                   $('[name="bairro"]').val(response.bairro).attr('readonly', true)
                   $('[name="cidade"]').val(response.localidade).attr('readonly', true)
-                }
-                else
-                {
+                } else {
                   $('#errocep').show(500)
                 }
               }
             });
-          }
-          else
-          {
+          } else {
             $('#errocep').fadeOut()
             $('[name="rua"]').val('').attr('readonly', false)
             $('[name="bairro"]').val('').attr('readonly', false)
