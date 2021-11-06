@@ -13,7 +13,7 @@
     <script src="{!! asset('./jquery/dist/jquery.min.js') !!}"></script>
     <title>Abraço Quentinho</title>
 </head>
-<body>
+<body style="overflow-x: hidden !important;">
   @include('components.cadastro')
   @include('components.alert')
   @include('components.cadastro_ajuda')
