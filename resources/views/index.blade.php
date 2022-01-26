@@ -76,7 +76,7 @@
       <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-0 pt-0 pb-4">
         <div class="container">
           <h2 class="">Compartilhe Coisas Boas, Compartilhe Amor</h2>
-          <p class="">Além da pandemia, nas últimas semanas estamos vivendo em um clima extremamente frio, e neste momento toda ajuda é bem vinda! Faça parte do nosso time colaborando!</p>
+          <p class="">Os tempos não estão fáceis pra ninguém, não é mesmo!? Mas se você pode, seja a resposta do pedido de alguém, roupas e alimentos podem ser tudo que precisam. Seja um colaborador!</p>
           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">Quero Contribuir!</a>
         </div>
       </div>
@@ -111,7 +111,7 @@
                   <h5 class="rounded py-2">Compartilhe Coisas Boas, Compartilhe Amor</h5>
                 </div>
                 <div class="row justify-content-end">
-                  <p class="rounded py-2 text-justify">Além da pandemia, nas últimas semanas estamos vivendo em um clima extremamente frio, e neste momento toda ajuda é bem vinda! Faça parte do nosso time colaborando!</p>
+                  <p class="rounded py-2 text-justify">Os tempos não estão fáceis pra ninguém, não é mesmo!? Mas se você pode, seja a resposta do pedido de alguém, roupas e alimentos podem ser tudo que precisam. Seja um colaborador!</p>
                 </div>
                 <div class="row justify-content-center">
                   <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-toggle="modal" data-target="#modalCadastro">
