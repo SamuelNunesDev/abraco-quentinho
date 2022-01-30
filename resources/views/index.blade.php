@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="{!! asset('./imagens/favicon.ico') !!}" type="image/x-icon">
     <link rel="stylesheet" href="{!! asset('bootstrap-icons/font/bootstrap-icons.css') !!}">
     <script src="{!! asset('./jquery/dist/jquery.min.js') !!}"></script>
-    <title>Abraço Quentinho</title>
+    <title>Programa Transformar</title>
 </head>
 <body style="overflow-x: hidden !important;">
   @include('components.cadastro')
@@ -22,7 +22,7 @@
       <a class="navbar-brand col-3 text-light text-center pt-3 px-4" href="#" id="brand-logo">
         <div class="row">
           <div class="col mt-2">
-            <img class="pb-3" src="{!! asset('./imagens/coracao-logo.png') !!}" alt="logo de coração"> Abraço Quentinho
+            <img class="pb-3" src="{!! asset('./imagens/coracao-logo.png') !!}" alt="logo de coração"> Programa Transformar
           </div>
         </div>
       </a>
@@ -67,8 +67,8 @@
     <section>
       <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-1 pt-4 pb-0 mb-0">
           <div class="container">
-            <h2 class="">Faça parte do nosso projeto Abraço Quentinho</h2>
-            <p class="">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e alimentos.</p>
+            <h2 class="">Faça parte do nosso projeto Programa Transformar</h2>
+            <p class="">O projeto "Programa Transformar" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e alimentos.</p>
             <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">Quero Participar!</a>
           </div>
           <img class="img-fluid" src="{!! asset('./imagens/jumb2.png') !!}" alt="pessoas se ajudando">
@@ -92,10 +92,10 @@
             <img class="carousel-img d-block w-50 h-50 mt-3" src="{!! asset('./imagens/background.jpg') !!}" alt="First slide">
               <div class="carousel-caption mb-5">
                 <div class="row justify-content-end">
-                  <h5 class="rounded py-2">Faça parte do nosso projeto Abraço Quentinho</h5>
+                  <h5 class="rounded py-2">Faça parte do nosso projeto Programa Transformar</h5>
                 </div>
                 <div class="row justify-content-end">
-                  <p class="rounded py-2 text-justify">O projeto "Abraço Quentinho" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e alimentos.</p>
+                  <p class="rounded py-2 text-justify">O projeto "Programa Transformar" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e alimentos.</p>
                 </div>
                 <div class="row justify-content-center">
                   <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-target="#modalCadastro" data-toggle="modal">
@@ -187,7 +187,7 @@
     </article>
     <section class="container">
         <article class="row py-3">
-            <h2 class="border-bottom col pb-2 mb-3" id="sobre">Sobre plataforma "Abraço Quentinho" </h2>
+            <h2 class="border-bottom col pb-2 mb-3" id="sobre">Sobre plataforma "Programa Transformar" </h2>
             <p>A idéia surgiu após uma conversa no grupo da familia no whatsapp. Estavamos falando sobre o frio que tem feito nos últimos dias e sobre como deve ser difícil para quem não tem um teto pra se abrigar quando a noite chega. O projeto propõe o seguinte fluxo:</p>
             <div class="col-lg-6">
             <h4>1º Acesso ao site</h4>
@@ -244,10 +244,10 @@
             <div class="container text-light">
               <div class="row pt-5 pb-3 rodape">
                   <div class="col-12 col-md-2">
-                      <p>Abraço Quentinho</p>
+                      <p>Programa Transformar</p>
                   </div>
                   <div class="col-12 col-md-5">
-                      <p>A plataforma "Abraço Quentinho" não possui fins lucrativos e é 100% colaborativa. Os dados só são salvos caso o usuário permita. Dados sigilosos como endereço não são expostos e excluídos automaticamente pelo sistema assim que visualizados pela equipe interna. Em caso de doações via Pix, será mostrado todo histórico na aba de ações, e como o recurso foi utilizado, com total transparencia ao usuário.</p>
+                      <p>A plataforma "Programa Transformar" não possui fins lucrativos e é 100% colaborativa. Os dados só são salvos caso o usuário permita. Dados sigilosos como endereço não são expostos e excluídos automaticamente pelo sistema assim que visualizados pela equipe interna. Em caso de doações via Pix, será mostrado todo histórico na aba de ações, e como o recurso foi utilizado, com total transparencia ao usuário.</p>
                   </div>
                   <div class="col-12 col-md-5">
                       <p>Em caso de dúvidas ou sugestões você pode entrar em contato diretamente com nossa equipe.</p>
