@@ -252,8 +252,8 @@
                   <div class="col-12 col-md-5">
                       <p>Em caso de dúvidas ou sugestões você pode entrar em contato diretamente com nossa equipe.</p>
                       <ul>
-                        <li><a class="footer-links" href="https://api.whatsapp.com/send?phone=553892056762&text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20a%20plataforma%20abra%C3%A7o%20quentinho." target="_blank">Samuel Nunes - Desenvolvedor do sistema</a></li>
-                        <li><a class="footer-links" href="https://api.whatsapp.com/send?phone=5538988451471&text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20a%20plataforma%20abra%C3%A7o%20quentinho." target="_blank">Lucas Queiroz - Administrador do sistema</a></li>
+                        <li><a class="footer-links" href="https://api.whatsapp.com/send?phone=553892056762&text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20a%20plataforma%20programa%20transformar." target="_blank">Samuel Nunes - Desenvolvedor do sistema</a></li>
+                        <li><a class="footer-links" href="https://api.whatsapp.com/send?phone=5538988451471&text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20a%20plataforma%20programa%20transformar." target="_blank">Lucas Queiroz - Administrador do sistema</a></li>
                     </ul>
                   </div>
               </div>
