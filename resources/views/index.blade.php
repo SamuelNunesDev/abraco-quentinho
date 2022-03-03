@@ -366,7 +366,7 @@
         })
 
         $('[name="whatsapp"]').on('keyup', function() {
-          $(this).mask('99 99999-9999')
+          $(this).mask('(99) 99999-9999')
         })
       })
     </script>
