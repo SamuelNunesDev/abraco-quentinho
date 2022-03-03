@@ -115,6 +115,7 @@ class ChamadosController extends Controller
         $chamado->nome = $request->nome;
         $chamado->tipo_chamado = $request->tipo_chamado;
         $chamado->whatsapp = str_replace(' ', '', str_replace('-', '', $request->whatsapp));
+        $chamado->status = Chamados::STATUS_EM_ANDAMENTO;
         $chamado->save();
         
         return back()->with('success', 'Sua solicitação foi enviada com sucesso, entraremmos em contato assim que possível '.$request->nome.'. 😄');
