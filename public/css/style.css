@@ -86,8 +86,8 @@ body {
     color: gray;
     text-decoration: none;
 }
-.slide2 {
-    height: 421px;
+.slides {
+    height: 25rem !important;
 }
 .carousel-control-prev-icon, .carousel-control-next-icon {
     color: #000; 

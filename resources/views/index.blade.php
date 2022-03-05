@@ -19,10 +19,11 @@
   @include('components.cadastro_ajuda')
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 px-0 shadow">
-      <a class="navbar-brand col-3 text-light text-center pt-3 px-4" href="#" id="brand-logo">
+      <a class="navbar-brand col-4 text-light text-center pt-3 px-4" href="#" id="brand-logo">
         <div class="row">
-          <div class="col mt-2">
-            <img class="pb-3" src="{!! asset('./imagens/coracao-logo.png') !!}" alt="logo de coração"> Programa Transformar
+          <div class="col">
+            <img class="pb-3" src="{!! asset('./imagens/coracao-logo.png') !!}" alt="logo de coração"> 
+            <span>Programa Transformar</span>
           </div>
         </div>
       </a>
@@ -65,19 +66,27 @@
   </header>
   <main>
     <section>
-      <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-1 pt-4 pb-0 mb-0">
+      <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-1 pt-4 pb-4 mb-0">
           <div class="container">
             <h2 class="">Faça parte do nosso projeto Programa Transformar</h2>
             <p class="">O projeto "Programa Transformar" é completamente colaborativo e sem fins lucrativos. A idéia é ajudar as pessoas mais necessitadas de forma ágil e em grande escala. Colabore conosco para ajudar o próximo, doando agasalhos, cobertores, roupas e alimentos.</p>
             <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">Quero Participar!</a>
           </div>
-          <img class="img-fluid" src="{!! asset('./imagens/jumb2.png') !!}" alt="pessoas se ajudando">
+          {{-- <img class="img-fluid" src="{!! asset('./imagens/jumb2.png') !!}" alt="pessoas se ajudando"> --}}
       </div>
-      <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-0 pt-0 pb-4">
+      <div class="jumbotron jumbotron-fluid bg-light d-lg-none mb-0 mt-0 pt-4 pb-4">
         <div class="container">
           <h2 class="">Compartilhe Coisas Boas, Compartilhe Amor</h2>
-          <p class="">Os tempos não estão fáceis pra ninguém, não é mesmo!? Mas se você pode, seja a resposta do pedido de alguém, roupas e alimentos podem ser tudo que precisam. Seja um colaborador!</p>
+          <p class="">Os tempos não estão fáceis pra ninguém, não é mesmo!? Mas se você pode, seja a resposta do pedido de alguém, roupas e alimentos podem ser tudo que precisam. Seja um colaborador!</p>          
           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">Quero Contribuir!</a>
+        </div>
+      </div>
+      <div class="jumbotron jumbotron-fluid bg-light d-lg-none mt-0 pt-4 pb-4">
+        <div class="container">
+          <h2 class="">Está precisando de ajuda? Fale Conosco!</h2>
+          <p class="">"Acreditar em si mesmo é muito importante, mas uma ajudinha de outras pessoas pode ser uma grande bênção." -Iroh
+            <br>  Caso necessite você pode solicitar roupas, alimentos ou uma ajuda financeira, psicologica e espiritual.</p>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#cadastro-ajuda">Solicitar ajuda</a>
         </div>
       </div>
     </section>
@@ -89,7 +98,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="carousel-img d-block w-50 h-50 mt-3" src="{!! asset('./imagens/background.jpg') !!}" alt="First slide">
+            <img class="carousel-img d-block w-50 h-50 mt-3 slides" src="{!! asset('./imagens/background.jpg') !!}" alt="First slide">
               <div class="carousel-caption mb-5">
                 <div class="row justify-content-end">
                   <h5 class="rounded py-2">Faça parte do nosso projeto Programa Transformar</h5>
@@ -105,7 +114,7 @@
               </div>
           </div>
           <div class="carousel-item">
-            <img class="carousel-img d-block w-50 h-50 mt-3 slide2" src="{!! asset('./imagens/background2.png') !!}" alt="Second slide">
+            <img class="carousel-img d-block w-50 h-50 mt-3 slides" src="{!! asset('./imagens/background2.png') !!}" alt="Second slide">
               <div class="carousel-caption mb-5">
                 <div class="row justify-content-end">
                   <h5 class="rounded py-2">Compartilhe Coisas Boas, Compartilhe Amor</h5>
@@ -116,6 +125,23 @@
                 <div class="row justify-content-center">
                   <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-toggle="modal" data-target="#modalCadastro">
                     <i class="bi bi-emoji-smile"></i> Quero Contribuir!
+                  </a>
+                </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img class="carousel-img d-block w-50 h-50 mt-3 slides" src="{!! asset('./imagens/background3.png') !!}" alt="Second slide">
+              <div class="carousel-caption mb-5">
+                <div class="row justify-content-end">
+                  <h5 class="rounded py-2">Está precisando de ajuda? Fale Conosco!</h5>
+                </div>
+                <div class="row justify-content-end">
+                  <p class="rounded py-2 text-justify">"Acreditar em si mesmo é muito importante, mas uma ajudinha de outras pessoas pode ser uma grande bênção." -Iroh
+                  <br>  Caso necessite você pode solicitar roupas, alimentos ou uma ajuda financeira, psicologica e espiritual.</p>
+                </div>
+                <div class="row justify-content-center">
+                  <a href="#" class="btn btn-outline-primary btn-lg offset-4" data-toggle="modal" data-target="#cadastro-ajuda">
+                    <i class="bi bi-chat-right-dots"></i> Solicitar ajuda
                   </a>
                 </div>
               </div>
