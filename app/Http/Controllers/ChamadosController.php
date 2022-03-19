@@ -20,16 +20,6 @@ class ChamadosController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -38,7 +28,7 @@ class ChamadosController extends Controller
     public function store(Request $request)
     {
         try {
-            $dados = $request->all();
+            $dados = $request->except('_token');
 
             $dados['whatsapp'] = str_replace('-', '', str_replace(' ', '', $dados['whatsapp']));
             if (isset($dados['cep'])) {
@@ -56,6 +46,13 @@ class ChamadosController extends Controller
 
             $dados['tipo_chamado'] = $tipo_chamado;
             $dados['status'] = 0;
+            $whatsapp = "";
+            for ($i = 0; $i < mb_strlen($dados['whatsapp']); $i++) {
+                if (preg_match ("/[a-zA-Z0-9]/", substr($dados['whatsapp'], $i, 1)) == 1) {
+                    $whatsapp .= substr($dados['whatsapp'], $i, 1);
+                }
+            }
+            $dados['whatsapp'] = $whatsapp;
 
             Chamados::create($dados);
         } catch (Exception $e) {
@@ -65,50 +62,6 @@ class ChamadosController extends Controller
         return back()->with('success', "Cadastro realizado com sucesso! Entraremos em contato assim que possível! Agradecemos sua colaboração {$dados['nome']} 😄");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\chamados  $chamados
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Chamados $chamados)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\chamados  $chamados
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Chamados $chamados)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\chamados  $chamados
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Chamados $chamados)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\chamados  $chamados
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Chamados $chamados)
-    {
-        //
-    }
     public function storeHelp(Request $request)
     {
         $chamado = new Chamados();
